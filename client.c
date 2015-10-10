@@ -24,7 +24,7 @@ void output(unsigned char *recvline)
 			if (recvline[26] == 0x01) printf(" Today's ");
 			else if (recvline[26] >= 0x02 && recvline[26] <= 0x09) printf(" The %dth day's ", recvline[26]);
 			else {printf("error\n"); return;}
-			if (recvline[27] >= 0 && recvline[27] <=100) printf(" weather is :%s ;",tianqi[(int)recvline[37]]);
+			if (recvline[27] >= 0 && recvline[27] <=100) printf(" weather is :%s ;",tianqi[(int)recvline[27]]);
 			else printf(" error\n");
 			printf(" Temp: %02d \n", (int)recvline[28]);
 		}
